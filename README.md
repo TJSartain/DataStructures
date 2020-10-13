@@ -1,3 +1,3 @@
 # DataStructures
 
-A description of this package.
+Some basic data structures in generic form.
