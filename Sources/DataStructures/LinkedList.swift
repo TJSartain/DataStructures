@@ -1,6 +1,5 @@
 //
 //  LinkedList.swift
-//  Viewer3D
 //
 //  Created by TJ Sartain on 9/28/20.
 //  Copyright © 2020 iTrinity, Inc. All rights reserved.
@@ -40,7 +39,7 @@ class LinkedList<T>: CustomStringConvertible
         return text + "]"
     }
     
-    func append(value: T)
+    func append(_ value: T)
     {
         let newNode = Node(value: value)
         if let tailNode = tail {
@@ -73,7 +72,7 @@ class LinkedList<T>: CustomStringConvertible
         tail = nil
     }
     
-    func remove(node: Node<T>) -> T
+    func remove(_ node: Node<T>) -> T
     {
         let prev = node.previous
         let next = node.next
@@ -93,17 +92,5 @@ class LinkedList<T>: CustomStringConvertible
         node.next = nil
         
         return node.value
-    }
-}
-
-class Node<T>
-{
-    var value: T
-    var next: Node<T>?
-    weak var previous: Node<T>?
-    
-    init(value: T)
-    {
-        self.value = value
     }
 }
