@@ -7,26 +7,26 @@
 
 import UIKit
 
-struct Queue<T>: CustomStringConvertible
+public struct Queue<T>: CustomStringConvertible
 {
     fileprivate var list = LinkedList<T>()
     
-    var isEmpty: Bool
+    public var isEmpty: Bool
     {
         return list.isEmpty
     }
     
-    var description: String
+    public var description: String
     {
         return list.description
     }
     
-    mutating func enqueue(_ element: T)
+    public mutating func add(_ element: T)
     {
         list.append(element)
     }
     
-    mutating func dequeue() -> T?
+    public mutating func remove() -> T?
     {
         guard !list.isEmpty, let element = list.first else { return nil }
         
@@ -35,7 +35,7 @@ struct Queue<T>: CustomStringConvertible
         return element.value
     }
     
-    func peek() -> T?
+    public func peek() -> T?
     {
         return list.first?.value
     }

@@ -1,6 +1,5 @@
 //
 //  Stack.swift
-//  Viewer3D
 //
 //  Created by TJ Sartain on 9/28/20.
 //  Copyright © 2020 iTrinity, Inc. All rights reserved.
@@ -8,21 +7,21 @@
 
 import UIKit
 
-struct Stack<T>: CustomStringConvertible
+public struct Stack<T>: CustomStringConvertible
 {
     fileprivate var array = [T]()
     
-    var isEmpty: Bool
+    public var isEmpty: Bool
     {
         return array.isEmpty
     }
     
-    var count: Int
+    public var count: Int
     {
         return array.count
     }
     
-    var description: String
+    public var description: String
     {
         let topDivider = "---Stack---\n"
         let bottomDivider = "\n-----------\n"
@@ -30,17 +29,17 @@ struct Stack<T>: CustomStringConvertible
         return topDivider + stackElements + bottomDivider
     }
     
-    mutating func push(_ element: T)
+    public mutating func push(_ element: T)
     {
         array.append(element)
     }
     
-    mutating func pop() -> T?
+    public mutating func pop() -> T?
     {
         return array.popLast()
     }
     
-    func peek() -> T?
+    public func peek() -> T?
     {
         return array.last
     }
