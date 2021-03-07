@@ -11,6 +11,11 @@ public struct Queue<T>: CustomStringConvertible
 {
     var list = LinkedList<T>()
     
+    public init()
+    {
+        list = LinkedList<T>()
+    }
+    
     public var isEmpty: Bool
     {
         return list.isEmpty

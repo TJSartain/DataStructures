@@ -11,6 +11,11 @@ public struct Stack<T>: CustomStringConvertible
 {
     var array = [T]()
     
+    public init()
+    {
+        array = [T]()
+    }
+    
     public var isEmpty: Bool
     {
         return array.isEmpty
