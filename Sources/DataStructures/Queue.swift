@@ -9,7 +9,7 @@ import UIKit
 
 public struct Queue<T>: CustomStringConvertible
 {
-    fileprivate var list = LinkedList<T>()
+    var list = LinkedList<T>()
     
     public var isEmpty: Bool
     {

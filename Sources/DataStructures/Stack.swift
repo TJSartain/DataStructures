@@ -9,7 +9,7 @@ import UIKit
 
 public struct Stack<T>: CustomStringConvertible
 {
-    fileprivate var array = [T]()
+    var array = [T]()
     
     public var isEmpty: Bool
     {
