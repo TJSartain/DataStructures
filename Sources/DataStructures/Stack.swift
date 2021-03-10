@@ -18,12 +18,12 @@ public struct Stack<T>: CustomStringConvertible
     
     public var isEmpty: Bool
     {
-        return array.isEmpty
+        array.isEmpty
     }
     
     public var count: Int
     {
-        return array.count
+        array.count
     }
     
     public var description: String
@@ -34,18 +34,20 @@ public struct Stack<T>: CustomStringConvertible
         return topDivider + stackElements + bottomDivider
     }
     
-    public mutating func push(_ element: T)
+    public mutating func push(_ element: T?)
     {
-        array.append(element)
+        if element != nil {
+            array.append(element!)
+        }
     }
     
     public mutating func pop() -> T?
     {
-        return array.popLast()
+        array.popLast()
     }
     
     public func peek() -> T?
     {
-        return array.last
+        array.last
     }
 }
