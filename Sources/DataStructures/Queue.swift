@@ -18,7 +18,7 @@ public struct Queue<T>: CustomStringConvertible
     
     public var isEmpty: Bool
     {
-        return list.isEmpty
+        list.isEmpty
     }
     
     public var description: String
@@ -42,6 +42,6 @@ public struct Queue<T>: CustomStringConvertible
     
     public func peek() -> T?
     {
-        return list.first?.value
+        list.first?.value
     }
 }

@@ -28,8 +28,8 @@ public struct Stack<T>: CustomStringConvertible
     
     public var description: String
     {
-        let topDivider = "---Stack---\n"
-        let bottomDivider = "\n-----------\n"
+        let topDivider = "" // ---Stack---\n"
+        let bottomDivider = "" // \n-----------\n"
         let stackElements = array.map { "\($0)" }.reversed().joined(separator: "\n")
         return topDivider + stackElements + bottomDivider
     }

@@ -29,14 +29,13 @@ class LinkedList<T>: CustomStringConvertible
     
     var description: String
     {
-        var text = "["
+        var list = [String]()
         var node = head
         while node != nil {
-            text += "\(node!.value)"
+            list.append("\(node!.value)")
             node = node!.next
-            if node != nil { text += ", " }
         }
-        return text + "]"
+        return list.map { "\($0)" }.joined(separator: "\n")
     }
     
     func append(_ value: T)
