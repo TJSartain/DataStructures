@@ -48,7 +48,7 @@ public struct Queue<T>: CustomStringConvertible
 
 extension Queue where T: Equatable
 {
-    func contains(_ value: T) -> Bool
+    public func contains(_ value: T) -> Bool
     {
         list.contains(value)
     }

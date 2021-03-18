@@ -96,7 +96,7 @@ class LinkedList<T>: CustomStringConvertible
 
 extension LinkedList where T: Equatable
 {
-    func contains(_ value: T) -> Bool
+    internal func contains(_ value: T) -> Bool
     {
         var node = head
         while node != nil {
