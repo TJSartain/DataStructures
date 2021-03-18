@@ -45,3 +45,11 @@ public struct Queue<T>: CustomStringConvertible
         list.first?.value
     }
 }
+
+extension Queue where T: Equatable
+{
+    func contains(_ value: T) -> Bool
+    {
+        list.contains(value)
+    }
+}

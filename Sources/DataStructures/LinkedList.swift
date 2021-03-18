@@ -93,3 +93,18 @@ class LinkedList<T>: CustomStringConvertible
         return node.value
     }
 }
+
+extension LinkedList where T: Equatable
+{
+    func contains(_ value: T) -> Bool
+    {
+        var node = head
+        while node != nil {
+            if node!.search(value: value) != nil { return true }
+            node = node!.next
+        }
+        return false
+    }
+}
+
+
