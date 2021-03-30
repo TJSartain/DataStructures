@@ -18,7 +18,7 @@ public struct Queue<T>: CustomStringConvertible
     
     public var size: Int
     {
-        list.
+        list.size
     }
     
     public var isEmpty: Bool

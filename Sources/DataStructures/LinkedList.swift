@@ -11,7 +11,7 @@ class LinkedList<T>: CustomStringConvertible
 {
     fileprivate var head: Node<T>?
     private var tail: Node<T>?
-    private var size: Int = 0
+    var size: Int = 0
     
     var isEmpty: Bool { head == nil }
     var first: Node<T>? { head }    
