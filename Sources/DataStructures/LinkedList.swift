@@ -11,21 +11,11 @@ class LinkedList<T>: CustomStringConvertible
 {
     fileprivate var head: Node<T>?
     private var tail: Node<T>?
+    private var size: Int = 0
     
-    var isEmpty: Bool
-    {
-        return head == nil
-    }
-    
-    var first: Node<T>?
-    {
-        return head
-    }
-    
-    var last: Node<T>?
-    {
-        return tail
-    }
+    var isEmpty: Bool { head == nil }
+    var first: Node<T>? { head }    
+    var last: Node<T>? { tail }
     
     var description: String
     {
@@ -49,6 +39,7 @@ class LinkedList<T>: CustomStringConvertible
             head = newNode
         }
         tail = newNode
+        size += 1
     }
     
     func nodeAt(index: Int) -> Node<T>?
@@ -69,6 +60,7 @@ class LinkedList<T>: CustomStringConvertible
     {
         head = nil
         tail = nil
+        size = 0
     }
     
     func remove(_ node: Node<T>) -> T
@@ -89,6 +81,9 @@ class LinkedList<T>: CustomStringConvertible
         
         node.previous = nil
         node.next = nil
+        
+        size -= 1
+        if size < 0 { size = 0 }
         
         return node.value
     }
