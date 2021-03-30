@@ -52,4 +52,9 @@ extension Queue where T: Equatable
     {
         list.contains(value)
     }
+    
+    public func repeated(_ item: T) -> Bool
+    {
+        list.last as! T == item
+    }
 }
