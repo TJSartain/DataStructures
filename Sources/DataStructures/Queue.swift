@@ -49,6 +49,11 @@ public struct Queue<T>: CustomStringConvertible
     {
         list.first?.value
     }
+    
+    public func last() -> T?
+    {
+        list.last?.value
+    }
 }
 
 extension Queue where T: Equatable
@@ -60,6 +65,6 @@ extension Queue where T: Equatable
     
     public func repeated(_ item: T) -> Bool
     {
-        list.size > 0 && list.last!.value == item
+        list.size > 0 && last() == item
     }
 }
