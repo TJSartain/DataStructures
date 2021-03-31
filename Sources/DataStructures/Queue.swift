@@ -60,6 +60,6 @@ extension Queue where T: Equatable
     
     public func repeated(_ item: T) -> Bool
     {
-        list.last as! T == item
+        list.size > 0 && list.last as! T == item
     }
 }
